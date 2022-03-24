@@ -82,7 +82,27 @@ public class stepdefinitions {
 	      sr.runScript(reader);
 
 	        
-	}}
+	}
+
+
+	@When("I read the sql file for verifying one row ofdata")
+	public void i_read_the_sql_file_for_verifying_one_row_ofdata() throws SQLException, FileNotFoundException {
+		//Getting the connection
+	      String mysqlUrl = "jdbc:mysql://localhost:3306/";
+	      Connection con = DriverManager.getConnection(mysqlUrl, "root", "darkkrad2");
+	      System.out.println("Connection established......");
+	    //Initialize the script runner
+	      ScriptRunner sr = new ScriptRunner(con);
+	      //Creating a reader object
+	      Reader reader = new BufferedReader(new FileReader("C:\\Users\\ANKITHA\\Desktop\\java-selenium\\datatableverify\\src\\test\\java\\resources\\readdata2.sql"));
+	      //Running the script
+	      sr.runScript(reader);
+	}
+
+
+
+	
+}
 
 
 

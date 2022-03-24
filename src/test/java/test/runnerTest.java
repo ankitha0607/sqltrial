@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		monochrome = true,
         features = "C:\\Users\\ANKITHA\\Desktop\\java-selenium\\datatableverify\\src\\test\\java\\resources",
-        //tags = "@Test1 or @Test2",
+        tags = "@Test1",
         glue = "/test"
         
         
